@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Chess AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+    <div id="name-popup">
+
+        <div class="popup-box">
+
+            <h2>Masukkan Nama Pemain</h2>
+
+            <input
+                type="text"
+                id="name-input"
+                placeholder="Nama pemain..."
+            >
+
+            <button onclick="startGame()">
+                START GAME
+            </button>
+
+    </div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- BOARD -->
+
+        <div id="board"></div>
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h2 style="margin-top:0px; margin-bottom:2px;">
+                BOT Catur Kaprodi PGSD UPI SERANG
+            </h2>
+
+            <h4 style="margin-top:0px; margin-bottom:10px;">
+                Created by. Andika Arisetyawan
+            </h4>
+
+            <div class="card">
+
+                <h3>PLAYER</h3>
+
+                <p id="player-name">
+                    PLAYER
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>AI</h2>
+
+                <p>
+                    BOT KAPRODI PGSD
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>STATUS</h2>
+
+                <p id="status">
+                    YOUR TURN
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>TIMER</h2>
+
+                <p id="white-timer">
+                    PLAYER : 10:00
+                </p>
+
+                <br>
+
+                <p id="black-timer">
+                AI : 10:00
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>LEVEL</h2>
+
+                <select id="difficulty">
+
+                    <option value="2">
+                        EASY
+                    </option>
+
+                    <option value="4">
+                        MEDIUM
+                    </option>
+  
+                    <option value="6" selected>
+                        HARD
+                    </option>
+
+                    <option value="9">
+                        GRANDMASTER
+                    </option>
+
+                </select>
+
+            </div>
+            <button onclick="restartGame()">
+                RESTART
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chess.js') }}"></script>
+
+</body>
+</html>
